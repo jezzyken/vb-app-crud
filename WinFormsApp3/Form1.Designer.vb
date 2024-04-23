@@ -33,6 +33,7 @@ Partial Class Form1
         btnClose = New Button()
         btnSave = New Button()
         LsvItemList = New ListView()
+        Label2 = New Label()
         SuspendLayout()
         ' 
         ' txtItem
@@ -47,7 +48,7 @@ Partial Class Form1
         ' lsvIten
         ' 
         lsvIten.BackColor = SystemColors.GrayText
-        lsvIten.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lsvIten.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lsvIten.ForeColor = SystemColors.InfoText
         lsvIten.Location = New Point(12, 56)
         lsvIten.MultiSelect = False
@@ -150,11 +151,21 @@ Partial Class Form1
         LsvItemList.UseCompatibleStateImageBehavior = False
         LsvItemList.View = View.Details
         ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(313, 13)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(41, 15)
+        Label2.TabIndex = 14
+        Label2.Text = "Label2"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(579, 266)
+        Controls.Add(Label2)
         Controls.Add(LsvItemList)
         Controls.Add(btnSave)
         Controls.Add(btnClose)
@@ -186,5 +197,6 @@ Partial Class Form1
     Friend WithEvents btnClose As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents LsvItemList As ListView
+    Friend WithEvents Label2 As Label
 
 End Class

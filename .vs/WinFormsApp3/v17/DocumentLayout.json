@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\vb-app-crud\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0BF324ED-012D-46AE-BA0D-13155626CE57}|WinFormsApp3\\WinFormsApp3.vbproj|c:\\users\\user\\source\\repos\\vb-app-crud\\winformsapp3\\winformsapp3.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0BF324ED-012D-46AE-BA0D-13155626CE57}|WinFormsApp3\\WinFormsApp3.vbproj|solutionrelative:winformsapp3\\winformsapp3.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WinFormsApp3",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
+              "RelativeDocumentMoniker": "WinFormsApp3\\WinFormsApp3.vbproj",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
+              "RelativeToolTip": "WinFormsApp3\\WinFormsApp3.vbproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2024-04-23T09:05:27.192Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
