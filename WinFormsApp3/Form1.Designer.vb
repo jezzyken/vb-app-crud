@@ -34,6 +34,7 @@ Partial Class Form1
         btnSave = New Button()
         LsvItemList = New ListView()
         Label2 = New Label()
+        btnNewUpdate = New Button()
         SuspendLayout()
         ' 
         ' txtItem
@@ -160,11 +161,21 @@ Partial Class Form1
         Label2.TabIndex = 14
         Label2.Text = "Label2"
         ' 
+        ' btnNewUpdate
+        ' 
+        btnNewUpdate.Location = New Point(469, 230)
+        btnNewUpdate.Name = "btnNewUpdate"
+        btnNewUpdate.Size = New Size(75, 23)
+        btnNewUpdate.TabIndex = 15
+        btnNewUpdate.Text = "Update"
+        btnNewUpdate.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(579, 266)
+        Controls.Add(btnNewUpdate)
         Controls.Add(Label2)
         Controls.Add(LsvItemList)
         Controls.Add(btnSave)
@@ -198,5 +209,6 @@ Partial Class Form1
     Friend WithEvents btnSave As Button
     Friend WithEvents LsvItemList As ListView
     Friend WithEvents Label2 As Label
+    Friend WithEvents btnNewUpdate As Button
 
 End Class

@@ -62,3 +62,14 @@ C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\ref
 C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.pdb
 C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.genruntimeconfig.cache
 C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\ref\WinFormsApp3.dll
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.Form1.resources
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.Resources.resources
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.vbproj.GenerateResource.cache
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.AssemblyInfoInputs.cache
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.AssemblyInfo.vb
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.vbproj.CoreCompileInputs.cache
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.sourcelink.json
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.dll
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\refint\WinFormsApp3.dll
+C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.pdb
