@@ -163,12 +163,13 @@ Partial Class Form1
         ' 
         ' btnNewUpdate
         ' 
+        btnNewUpdate.BackColor = SystemColors.ActiveCaption
         btnNewUpdate.Location = New Point(469, 230)
         btnNewUpdate.Name = "btnNewUpdate"
         btnNewUpdate.Size = New Size(75, 23)
         btnNewUpdate.TabIndex = 15
         btnNewUpdate.Text = "Update"
-        btnNewUpdate.UseVisualStyleBackColor = True
+        btnNewUpdate.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 

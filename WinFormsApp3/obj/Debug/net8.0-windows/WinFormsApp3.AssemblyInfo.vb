@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("WinFormsApp3"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+617c10aa4cb0f75e5188fa0836ca78acf874dca2"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+222353992aab468a532fd2aefcc974988be06dbd"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("WinFormsApp3"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("WinFormsApp3"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _
