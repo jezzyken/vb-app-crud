@@ -6,8 +6,9 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form1
 
-    Dim connectionString As String = "Server=localhost;Database=db_rivera_group_1;Uid=root;Pwd=capricorn1973@;"
+    Dim connectionString As String = "Server=localhost;Database=db_rivera_group_1;Uid=root;Pwd=1234;"
     Dim connection As New MySqlConnection(connectionString)
+    Dim _itemId
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         getTotalItems()
@@ -58,7 +59,7 @@ Public Class Form1
         Me.Close()
     End Sub
 
-    Private Sub lsvIten_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lsvIten.SelectedIndexChanged
+    Private Sub lsvIten_SelectedIndexChanged(sender As Object, e As EventArgs)
         If lsvIten.SelectedItems.Count > 0 Then
             Dim selectedItem = lsvIten.SelectedItems(0)
 
@@ -103,9 +104,9 @@ Public Class Form1
     End Sub
 
     Public Sub LoadData()
-        LsvItemList.Clear()
-        LsvItemList.Columns.Add("ID")
-        LsvItemList.Columns.Add("Item")
+        ListNewItem.Clear()
+        ListNewItem.Columns.Add("ID")
+        ListNewItem.Columns.Add("Item")
         Using connection As New MySqlConnection(connectionString)
             Dim query As String = "SELECT * FROM tbl_item;"
             Dim command As New MySqlCommand(query, connection)
@@ -116,7 +117,7 @@ Public Class Form1
 
                 While reader.Read()
                     Dim lvItem As New ListViewItem({reader.GetInt32("id").ToString(), reader("item").ToString()})
-                    LsvItemList.Items.Add(lvItem)
+                    ListNewItem.Items.Add(lvItem)
                 End While
 
                 reader.Close()
@@ -134,7 +135,72 @@ Public Class Form1
 
     End Sub
 
-    Private Sub LsvItemList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LsvItemList.SelectedIndexChanged
+    Private Sub ListNewItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListNewItem.SelectedIndexChanged
+        If ListNewItem.SelectedItems.Count > 0 Then
+            Dim selectedIndex As Integer = ListNewItem.SelectedIndices(0)
+            Dim txtUpdateItem As String = ListNewItem.SelectedItems(0).SubItems(1).Text
+            _itemId = selectedIndex.ToString()
+            txtUpdate.Text = txtUpdateItem
+        End If
+    End Sub
 
+    Private Sub UpdateDatabase(id As String, newItem As String)
+        Using connection As New MySqlConnection(connectionString)
+            ' Open the connection
+            connection.Open()
+
+            ' Create the SQL Update Command
+            Dim query As String = "UPDATE tbl_item SET item = @item WHERE id = @id"
+            Using command As New MySqlCommand(query, connection)
+                ' Add the parameters to the command
+                command.Parameters.AddWithValue("@item", newItem)
+                command.Parameters.AddWithValue("@id", id)
+
+                ' Execute the command
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+        MessageBox.Show("Record Updated Successfully")
+        Clear()
+    End Sub
+
+    Private Sub btnNewUpdate_Click(sender As Object, e As EventArgs) Handles btnNewUpdate.Click
+        If ListNewItem.SelectedItems.Count > 0 Then
+            Dim selectedId As String = ListNewItem.SelectedItems(0).Text ' Assuming the ID is in the first column
+            UpdateDatabase(selectedId, txtUpdate.Text)
+        End If
+    End Sub
+
+    Private Sub Clear()
+        LoadData()
+        txtUpdate.Text = ""
+    End Sub
+
+    Private Sub btnNewDelete_Click(sender As Object, e As EventArgs) Handles btnNewDelete.Click
+        If ListNewItem.SelectedItems.Count > 0 Then
+            Dim selectedId As String = ListNewItem.SelectedItems(0).Text
+            DeleteRecord(selectedId)
+        Else
+            MessageBox.Show("Please select an item to delete.")
+        End If
+    End Sub
+
+    Private Sub DeleteRecord(id As String)
+        Using connection As New MySqlConnection(connectionString)
+            connection.Open()
+
+            Dim query As String = "DELETE FROM tbl_item WHERE id = @id"
+            Using command As New MySqlCommand(query, connection)
+                command.Parameters.AddWithValue("@id", id)
+
+                Dim result As Integer = command.ExecuteNonQuery()
+                If result > 0 Then
+                    MessageBox.Show("Record Deleted Successfully")
+                    Clear()
+                Else
+                    MessageBox.Show("No record was deleted. Please check the ID.")
+                End If
+            End Using
+        End Using
     End Sub
 End Class

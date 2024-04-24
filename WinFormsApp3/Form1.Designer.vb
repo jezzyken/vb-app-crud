@@ -32,9 +32,10 @@ Partial Class Form1
         txtTotal = New TextBox()
         btnClose = New Button()
         btnSave = New Button()
-        LsvItemList = New ListView()
-        Label2 = New Label()
         btnNewUpdate = New Button()
+        btnNewDelete = New Button()
+        txtUpdate = New TextBox()
+        ListNewItem = New ListView()
         SuspendLayout()
         ' 
         ' txtItem
@@ -49,7 +50,7 @@ Partial Class Form1
         ' lsvIten
         ' 
         lsvIten.BackColor = SystemColors.GrayText
-        lsvIten.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lsvIten.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lsvIten.ForeColor = SystemColors.InfoText
         lsvIten.Location = New Point(12, 56)
         lsvIten.MultiSelect = False
@@ -141,44 +142,52 @@ Partial Class Form1
         btnSave.Text = "Save"
         btnSave.UseVisualStyleBackColor = False
         ' 
-        ' LsvItemList
-        ' 
-        LsvItemList.BackColor = SystemColors.HotTrack
-        LsvItemList.ForeColor = SystemColors.InfoText
-        LsvItemList.Location = New Point(297, 56)
-        LsvItemList.Name = "LsvItemList"
-        LsvItemList.Size = New Size(267, 168)
-        LsvItemList.TabIndex = 13
-        LsvItemList.UseCompatibleStateImageBehavior = False
-        LsvItemList.View = View.Details
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Location = New Point(313, 13)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(41, 15)
-        Label2.TabIndex = 14
-        Label2.Text = "Label2"
-        ' 
         ' btnNewUpdate
         ' 
         btnNewUpdate.BackColor = SystemColors.ActiveCaption
-        btnNewUpdate.Location = New Point(469, 230)
+        btnNewUpdate.Location = New Point(409, 229)
         btnNewUpdate.Name = "btnNewUpdate"
         btnNewUpdate.Size = New Size(75, 23)
         btnNewUpdate.TabIndex = 15
         btnNewUpdate.Text = "Update"
         btnNewUpdate.UseVisualStyleBackColor = False
         ' 
+        ' btnNewDelete
+        ' 
+        btnNewDelete.BackColor = Color.IndianRed
+        btnNewDelete.Location = New Point(490, 229)
+        btnNewDelete.Name = "btnNewDelete"
+        btnNewDelete.Size = New Size(75, 23)
+        btnNewDelete.TabIndex = 16
+        btnNewDelete.Text = "Delete"
+        btnNewDelete.UseVisualStyleBackColor = False
+        ' 
+        ' txtUpdate
+        ' 
+        txtUpdate.Location = New Point(464, 27)
+        txtUpdate.Name = "txtUpdate"
+        txtUpdate.Size = New Size(100, 23)
+        txtUpdate.TabIndex = 17
+        ' 
+        ' ListNewItem
+        ' 
+        ListNewItem.FullRowSelect = True
+        ListNewItem.Location = New Point(297, 56)
+        ListNewItem.Name = "ListNewItem"
+        ListNewItem.Size = New Size(267, 168)
+        ListNewItem.TabIndex = 19
+        ListNewItem.UseCompatibleStateImageBehavior = False
+        ListNewItem.View = View.Details
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(579, 266)
+        ClientSize = New Size(586, 273)
+        Controls.Add(ListNewItem)
+        Controls.Add(txtUpdate)
+        Controls.Add(btnNewDelete)
         Controls.Add(btnNewUpdate)
-        Controls.Add(Label2)
-        Controls.Add(LsvItemList)
         Controls.Add(btnSave)
         Controls.Add(btnClose)
         Controls.Add(txtTotal)
@@ -208,8 +217,9 @@ Partial Class Form1
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents btnClose As Button
     Friend WithEvents btnSave As Button
-    Friend WithEvents LsvItemList As ListView
-    Friend WithEvents Label2 As Label
     Friend WithEvents btnNewUpdate As Button
+    Friend WithEvents btnNewDelete As Button
+    Friend WithEvents txtUpdate As TextBox
+    Friend WithEvents ListNewItem As ListView
 
 End Class
