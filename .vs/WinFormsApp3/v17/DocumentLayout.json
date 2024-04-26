@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\vb-app-crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0BF324ED-012D-46AE-BA0D-13155626CE57}|WinFormsApp3\\WinFormsApp3.vbproj|C:\\Users\\User\\source\\repos\\vb-app-crud\\winformsapp3\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{0BF324ED-012D-46AE-BA0D-13155626CE57}|WinFormsApp3\\WinFormsApp3.vbproj|solutionrelative:winformsapp3\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0BF324ED-012D-46AE-BA0D-13155626CE57}|WinFormsApp3\\WinFormsApp3.vbproj|C:\\Users\\User\\source\\repos\\vb-app-crud\\winformsapp3\\winformsapp3.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{0BF324ED-012D-46AE-BA0D-13155626CE57}|WinFormsApp3\\WinFormsApp3.vbproj|solutionrelative:winformsapp3\\winformsapp3.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -22,15 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Form1.vb",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\Form1.vb",
               "RelativeDocumentMoniker": "WinFormsApp3\\Form1.vb",
@@ -44,18 +44,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\Form1.vb",
-              "RelativeDocumentMoniker": "WinFormsApp3\\Form1.vb",
-              "ToolTip": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\Form1.vb [Design]",
-              "RelativeToolTip": "WinFormsApp3\\Form1.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-04-23T09:07:27.045Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "WinFormsApp3.vbproj",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
               "RelativeDocumentMoniker": "WinFormsApp3\\WinFormsApp3.vbproj",
