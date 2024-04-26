@@ -6,7 +6,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form1
 
-    Dim connectionString As String = "Server=localhost;Database=db_rivera_group_1;Uid=root;Pwd=1234;"
+    Dim connectionString As String = "Server=localhost;Database=db_rivera_group_1;Uid=root;Pwd=capricorn1973@;"
     Dim connection As New MySqlConnection(connectionString)
     Dim _itemId
 

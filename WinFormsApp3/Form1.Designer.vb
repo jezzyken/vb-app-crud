@@ -36,6 +36,9 @@ Partial Class Form1
         btnNewDelete = New Button()
         txtUpdate = New TextBox()
         ListNewItem = New ListView()
+        btnNewClear = New Button()
+        btnNewRefresh = New Button()
+        btnNewExport = New Button()
         SuspendLayout()
         ' 
         ' txtItem
@@ -50,7 +53,7 @@ Partial Class Form1
         ' lsvIten
         ' 
         lsvIten.BackColor = SystemColors.GrayText
-        lsvIten.Font = New Font("Segoe UI", 9.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lsvIten.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lsvIten.ForeColor = SystemColors.InfoText
         lsvIten.Location = New Point(12, 56)
         lsvIten.MultiSelect = False
@@ -145,7 +148,7 @@ Partial Class Form1
         ' btnNewUpdate
         ' 
         btnNewUpdate.BackColor = SystemColors.ActiveCaption
-        btnNewUpdate.Location = New Point(409, 229)
+        btnNewUpdate.Location = New Point(643, 230)
         btnNewUpdate.Name = "btnNewUpdate"
         btnNewUpdate.Size = New Size(75, 23)
         btnNewUpdate.TabIndex = 15
@@ -155,7 +158,7 @@ Partial Class Form1
         ' btnNewDelete
         ' 
         btnNewDelete.BackColor = Color.IndianRed
-        btnNewDelete.Location = New Point(490, 229)
+        btnNewDelete.Location = New Point(724, 229)
         btnNewDelete.Name = "btnNewDelete"
         btnNewDelete.Size = New Size(75, 23)
         btnNewDelete.TabIndex = 16
@@ -164,26 +167,59 @@ Partial Class Form1
         ' 
         ' txtUpdate
         ' 
-        txtUpdate.Location = New Point(464, 27)
+        txtUpdate.Location = New Point(335, 27)
         txtUpdate.Name = "txtUpdate"
-        txtUpdate.Size = New Size(100, 23)
+        txtUpdate.Size = New Size(267, 23)
         txtUpdate.TabIndex = 17
         ' 
         ' ListNewItem
         ' 
         ListNewItem.FullRowSelect = True
-        ListNewItem.Location = New Point(297, 56)
+        ListNewItem.Location = New Point(335, 55)
         ListNewItem.Name = "ListNewItem"
-        ListNewItem.Size = New Size(267, 168)
+        ListNewItem.Size = New Size(464, 168)
         ListNewItem.TabIndex = 19
         ListNewItem.UseCompatibleStateImageBehavior = False
         ListNewItem.View = View.Details
         ' 
+        ' btnNewClear
+        ' 
+        btnNewClear.BackColor = SystemColors.MenuHighlight
+        btnNewClear.Location = New Point(562, 230)
+        btnNewClear.Name = "btnNewClear"
+        btnNewClear.Size = New Size(75, 23)
+        btnNewClear.TabIndex = 20
+        btnNewClear.Text = "Clear"
+        btnNewClear.UseVisualStyleBackColor = False
+        ' 
+        ' btnNewRefresh
+        ' 
+        btnNewRefresh.BackColor = Color.RosyBrown
+        btnNewRefresh.Location = New Point(481, 230)
+        btnNewRefresh.Name = "btnNewRefresh"
+        btnNewRefresh.Size = New Size(75, 23)
+        btnNewRefresh.TabIndex = 21
+        btnNewRefresh.Text = "Refresh"
+        btnNewRefresh.UseVisualStyleBackColor = False
+        ' 
+        ' btnNewExport
+        ' 
+        btnNewExport.BackColor = Color.DarkOrange
+        btnNewExport.Location = New Point(400, 230)
+        btnNewExport.Name = "btnNewExport"
+        btnNewExport.Size = New Size(75, 23)
+        btnNewExport.TabIndex = 22
+        btnNewExport.Text = "Export"
+        btnNewExport.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(586, 273)
+        ClientSize = New Size(841, 273)
+        Controls.Add(btnNewExport)
+        Controls.Add(btnNewRefresh)
+        Controls.Add(btnNewClear)
         Controls.Add(ListNewItem)
         Controls.Add(txtUpdate)
         Controls.Add(btnNewDelete)
@@ -221,5 +257,8 @@ Partial Class Form1
     Friend WithEvents btnNewDelete As Button
     Friend WithEvents txtUpdate As TextBox
     Friend WithEvents ListNewItem As ListView
+    Friend WithEvents btnNewClear As Button
+    Friend WithEvents btnNewRefresh As Button
+    Friend WithEvents btnNewExport As Button
 
 End Class

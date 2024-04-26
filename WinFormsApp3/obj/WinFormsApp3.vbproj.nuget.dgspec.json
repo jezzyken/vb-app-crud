@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KenJS\\Documents\\Work\\projects 2024\\desktop-app\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj": {}
+    "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\KenJS\\Documents\\Work\\projects 2024\\desktop-app\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj": {
+    "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KenJS\\Documents\\Work\\projects 2024\\desktop-app\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
         "projectName": "WinFormsApp3",
-        "projectPath": "C:\\Users\\KenJS\\Documents\\Work\\projects 2024\\desktop-app\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
-        "packagesPath": "C:\\Users\\KenJS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KenJS\\Documents\\Work\\projects 2024\\desktop-app\\vb-app-crud\\WinFormsApp3\\obj\\",
+        "projectPath": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\WinFormsApp3.vbproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\vb-app-crud\\WinFormsApp3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KenJS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
