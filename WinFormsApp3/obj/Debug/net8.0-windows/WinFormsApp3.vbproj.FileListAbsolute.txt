@@ -74,3 +74,16 @@ C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3
 C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\refint\WinFormsApp3.dll
 C:\Users\KenJS\Documents\Work\projects 2024\desktop-app\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.pdb
 C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\obj\Debug\net8.0-windows\WinFormsApp3.Form2.resources
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\EPPlus.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\EPPlus.Interfaces.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\EPPlus.System.Drawing.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\User\source\repos\vb-app-crud\WinFormsApp3\bin\Debug\net8.0-windows\Microsoft.IO.RecyclableMemoryStream.dll

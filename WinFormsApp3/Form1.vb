@@ -3,6 +3,9 @@ Imports MySql.Data.MySqlClient
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports System.Xml.Serialization
+Imports Excel = Microsoft.Office.Interop.Excel
+Imports OfficeOpenXml
+Imports System.IO
 
 
 Public Class Form1
@@ -222,10 +225,55 @@ Public Class Form1
 
     Private Sub RefreshListNewItem()
         ' txtUpdate.Text() = "Data has been refreshed"
+        LoadData()
         MessageBox.Show("Database Refreshed")
     End Sub
 
     Private Sub btnNewExport_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim connectionString As String = "Server=localhost;Database=db_rivera_group_1;Uid=root;Pwd=capricorn1973@;"
+        Dim query As String = "SELECT * FROM tbl_item"
+
+        ' Set EPPlus license context
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial
+
+        Using connection As New MySqlConnection(connectionString)
+            Using command As New MySqlCommand(query, connection)
+                connection.Open()
+                Using reader As MySqlDataReader = command.ExecuteReader()
+                    Dim dataTable As New DataTable()
+                    dataTable.Load(reader)
+
+                    If dataTable.Rows.Count > 0 Then
+                        Using package As New ExcelPackage()
+                            Dim worksheet As ExcelWorksheet = package.Workbook.Worksheets.Add("Sheet1")
+
+                            ' Write column names
+                            For i As Integer = 0 To dataTable.Columns.Count - 1
+                                worksheet.Cells(1, i + 1).Value = dataTable.Columns(i).ColumnName
+                            Next
+
+                            ' Write data
+                            For i As Integer = 0 To dataTable.Rows.Count - 1
+                                For j As Integer = 0 To dataTable.Columns.Count - 1
+                                    worksheet.Cells(i + 2, j + 1).Value = dataTable.Rows(i)(j).ToString()
+                                Next
+                            Next
+
+                            ' Save the Excel file
+                            Dim saveFileDialog As New SaveFileDialog()
+                            saveFileDialog.Filter = "Excel files (*.xlsx)|*.xlsx"
+                            If saveFileDialog.ShowDialog() = DialogResult.OK Then
+                                Dim fileStream As New FileStream(saveFileDialog.FileName, FileMode.Create)
+                                package.SaveAs(fileStream)
+                                fileStream.Close()
+                            End If
+                        End Using
+                    Else
+                        MessageBox.Show("No data to export.")
+                    End If
+                End Using
+            End Using
+        End Using
 
     End Sub
 End Class
