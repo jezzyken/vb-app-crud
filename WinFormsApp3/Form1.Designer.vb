@@ -31,14 +31,14 @@ Partial Class Form1
         btnClear = New Button()
         txtTotal = New TextBox()
         btnClose = New Button()
-        btnSave = New Button()
         btnNewUpdate = New Button()
         btnNewDelete = New Button()
         txtUpdate = New TextBox()
+        Button2 = New Button()
+        Button3 = New Button()
+        Button4 = New Button()
+        Button1 = New Button()
         ListNewItem = New ListView()
-        btnNewClear = New Button()
-        btnNewRefresh = New Button()
-        btnNewExport = New Button()
         SuspendLayout()
         ' 
         ' txtItem
@@ -107,7 +107,7 @@ Partial Class Form1
         ' btnClear
         ' 
         btnClear.BackColor = SystemColors.InactiveCaption
-        btnClear.Location = New Point(198, 143)
+        btnClear.Location = New Point(198, 172)
         btnClear.Name = "btnClear"
         btnClear.Size = New Size(75, 23)
         btnClear.TabIndex = 6
@@ -117,9 +117,9 @@ Partial Class Form1
         ' 
         ' txtTotal
         ' 
-        txtTotal.BackColor = SystemColors.ControlLight
+        txtTotal.BackColor = Color.OrangeRed
         txtTotal.BorderStyle = BorderStyle.FixedSingle
-        txtTotal.Location = New Point(73, 235)
+        txtTotal.Location = New Point(82, 235)
         txtTotal.Name = "txtTotal"
         txtTotal.Size = New Size(52, 23)
         txtTotal.TabIndex = 7
@@ -135,20 +135,10 @@ Partial Class Form1
         btnClose.Text = "Exit"
         btnClose.UseVisualStyleBackColor = False
         ' 
-        ' btnSave
-        ' 
-        btnSave.BackColor = SystemColors.AppWorkspace
-        btnSave.Location = New Point(198, 172)
-        btnSave.Name = "btnSave"
-        btnSave.Size = New Size(75, 23)
-        btnSave.TabIndex = 10
-        btnSave.Text = "Save"
-        btnSave.UseVisualStyleBackColor = False
-        ' 
         ' btnNewUpdate
         ' 
         btnNewUpdate.BackColor = SystemColors.ActiveCaption
-        btnNewUpdate.Location = New Point(643, 230)
+        btnNewUpdate.Location = New Point(538, 229)
         btnNewUpdate.Name = "btnNewUpdate"
         btnNewUpdate.Size = New Size(75, 23)
         btnNewUpdate.TabIndex = 15
@@ -158,7 +148,7 @@ Partial Class Form1
         ' btnNewDelete
         ' 
         btnNewDelete.BackColor = Color.IndianRed
-        btnNewDelete.Location = New Point(724, 229)
+        btnNewDelete.Location = New Point(619, 228)
         btnNewDelete.Name = "btnNewDelete"
         btnNewDelete.Size = New Size(75, 23)
         btnNewDelete.TabIndex = 16
@@ -167,64 +157,76 @@ Partial Class Form1
         ' 
         ' txtUpdate
         ' 
-        txtUpdate.Location = New Point(335, 27)
+        txtUpdate.BackColor = Color.DarkSalmon
+        txtUpdate.Location = New Point(295, 25)
         txtUpdate.Name = "txtUpdate"
-        txtUpdate.Size = New Size(267, 23)
+        txtUpdate.Size = New Size(156, 23)
         txtUpdate.TabIndex = 17
+        ' 
+        ' Button2
+        ' 
+        Button2.BackColor = SystemColors.MenuHighlight
+        Button2.Location = New Point(457, 230)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(75, 23)
+        Button2.TabIndex = 20
+        Button2.Text = "Clear"
+        Button2.UseVisualStyleBackColor = False
+        ' 
+        ' Button3
+        ' 
+        Button3.BackColor = Color.RosyBrown
+        Button3.Location = New Point(376, 229)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(75, 23)
+        Button3.TabIndex = 21
+        Button3.Text = "Refresh"
+        Button3.UseVisualStyleBackColor = False
+        ' 
+        ' Button4
+        ' 
+        Button4.BackColor = Color.DarkOrange
+        Button4.Location = New Point(295, 228)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(75, 23)
+        Button4.TabIndex = 22
+        Button4.Text = "Export"
+        Button4.UseVisualStyleBackColor = False
+        ' 
+        ' Button1
+        ' 
+        Button1.BackColor = SystemColors.AppWorkspace
+        Button1.Location = New Point(198, 143)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(75, 23)
+        Button1.TabIndex = 10
+        Button1.Text = "Save"
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' ListNewItem
         ' 
+        ListNewItem.BackColor = SystemColors.MenuHighlight
         ListNewItem.FullRowSelect = True
-        ListNewItem.Location = New Point(335, 55)
+        ListNewItem.Location = New Point(295, 54)
         ListNewItem.Name = "ListNewItem"
-        ListNewItem.Size = New Size(464, 168)
+        ListNewItem.Size = New Size(399, 168)
         ListNewItem.TabIndex = 19
         ListNewItem.UseCompatibleStateImageBehavior = False
         ListNewItem.View = View.Details
-        ' 
-        ' btnNewClear
-        ' 
-        btnNewClear.BackColor = SystemColors.MenuHighlight
-        btnNewClear.Location = New Point(562, 230)
-        btnNewClear.Name = "btnNewClear"
-        btnNewClear.Size = New Size(75, 23)
-        btnNewClear.TabIndex = 20
-        btnNewClear.Text = "Clear"
-        btnNewClear.UseVisualStyleBackColor = False
-        ' 
-        ' btnNewRefresh
-        ' 
-        btnNewRefresh.BackColor = Color.RosyBrown
-        btnNewRefresh.Location = New Point(481, 230)
-        btnNewRefresh.Name = "btnNewRefresh"
-        btnNewRefresh.Size = New Size(75, 23)
-        btnNewRefresh.TabIndex = 21
-        btnNewRefresh.Text = "Refresh"
-        btnNewRefresh.UseVisualStyleBackColor = False
-        ' 
-        ' btnNewExport
-        ' 
-        btnNewExport.BackColor = Color.DarkOrange
-        btnNewExport.Location = New Point(400, 230)
-        btnNewExport.Name = "btnNewExport"
-        btnNewExport.Size = New Size(75, 23)
-        btnNewExport.TabIndex = 22
-        btnNewExport.Text = "Export"
-        btnNewExport.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(841, 273)
-        Controls.Add(btnNewExport)
-        Controls.Add(btnNewRefresh)
-        Controls.Add(btnNewClear)
+        ClientSize = New Size(710, 273)
+        Controls.Add(Button4)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
         Controls.Add(ListNewItem)
         Controls.Add(txtUpdate)
         Controls.Add(btnNewDelete)
+        Controls.Add(Button1)
         Controls.Add(btnNewUpdate)
-        Controls.Add(btnSave)
         Controls.Add(btnClose)
         Controls.Add(txtTotal)
         Controls.Add(btnClear)
@@ -235,6 +237,7 @@ Partial Class Form1
         Controls.Add(lsvIten)
         Controls.Add(txtItem)
         ForeColor = SystemColors.Desktop
+        FormBorderStyle = FormBorderStyle.Fixed3D
         Name = "Form1"
         StartPosition = FormStartPosition.CenterScreen
         Tag = " "
@@ -252,13 +255,13 @@ Partial Class Form1
     Friend WithEvents btnClear As Button
     Friend WithEvents txtTotal As TextBox
     Friend WithEvents btnClose As Button
-    Friend WithEvents btnSave As Button
     Friend WithEvents btnNewUpdate As Button
     Friend WithEvents btnNewDelete As Button
     Friend WithEvents txtUpdate As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Button1 As Button
     Friend WithEvents ListNewItem As ListView
-    Friend WithEvents btnNewClear As Button
-    Friend WithEvents btnNewRefresh As Button
-    Friend WithEvents btnNewExport As Button
 
 End Class

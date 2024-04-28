@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 Imports System.Windows.Forms
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Xml.Serialization
 
 
 Public Class Form1
@@ -73,22 +74,26 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
+    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles Button1.Click
         For Each item As ListViewItem In lsvIten.Items
             Dim newItem As New ListViewItem(item.Text)
 
-            For i As Integer = 1 To item.SubItems.Count - 1
+            For i = 1 To item.SubItems.Count - 1
                 newItem.SubItems.Add(item.SubItems(i).Text)
             Next
 
             Using connection As New MySqlConnection(connectionString)
-                Dim query As String = "INSERT INTO tbl_item (item) VALUES (@item);"
+                Dim query = "INSERT INTO tbl_item (item) VALUES (@item);"
                 Dim command As New MySqlCommand(query, connection)
                 command.Parameters.AddWithValue("@item", newItem.Text)
 
                 Try
                     connection.Open()
-                    If command.ExecuteNonQuery() > 0 Then
+                    If command.ExecuteNonQuery() <= 0 Then
+
+                    End If
+                    Continue For
+                    If command.ExecuteNonQuery > 0 Then
 
                     End If
                 Catch ex As Exception
@@ -100,7 +105,6 @@ Public Class Form1
         MessageBox.Show("Record added successfully.")
         lsvIten.Clear()
         LoadData()
-
     End Sub
 
     Public Sub LoadData()
@@ -137,9 +141,9 @@ Public Class Form1
 
     Private Sub ListNewItem_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListNewItem.SelectedIndexChanged
         If ListNewItem.SelectedItems.Count > 0 Then
-            Dim selectedIndex As Integer = ListNewItem.SelectedIndices(0)
-            Dim txtUpdateItem As String = ListNewItem.SelectedItems(0).SubItems(1).Text
-            _itemId = selectedIndex.ToString()
+            Dim selectedIndex = ListNewItem.SelectedIndices(0)
+            Dim txtUpdateItem = ListNewItem.SelectedItems(0).SubItems(1).Text
+            _itemId = selectedIndex.ToString
             txtUpdate.Text = txtUpdateItem
         End If
     End Sub
@@ -168,6 +172,7 @@ Public Class Form1
         If ListNewItem.SelectedItems.Count > 0 Then
             Dim selectedId As String = ListNewItem.SelectedItems(0).Text ' Assuming the ID is in the first column
             UpdateDatabase(selectedId, txtUpdate.Text)
+
         End If
     End Sub
 
@@ -202,5 +207,25 @@ Public Class Form1
                 End If
             End Using
         End Using
+    End Sub
+
+    Private Sub btnNewClear_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txtUpdate.Text = ""
+
+    End Sub
+
+    Private Sub btnNewRefresh_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        'Call a method to refresh the data in ListNewItem
+
+        RefreshListNewItem()
+    End Sub
+
+    Private Sub RefreshListNewItem()
+        ' txtUpdate.Text() = "Data has been refreshed"
+        MessageBox.Show("Database Refreshed")
+    End Sub
+
+    Private Sub btnNewExport_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
     End Sub
 End Class
